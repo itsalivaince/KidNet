@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kidnet/View/first_page.dart';
 import 'package:kidnet/View/home_screen.dart';
 import 'package:kidnet/View/login_page.dart';
+import 'package:kidnet/View/search_screen.dart';
 import 'package:kidnet/View/second_page.dart';
 
 void main() {
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( 
+    return GetMaterialApp( 
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -36,10 +38,11 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       
-      //home: SecondPage(),
-      //home: FirstPage(),
+      //home SecondPage(),
+      home: FirstPage(),
       //home: LoginPage(),
-     home: HomeScreen(),
+     //home: HomeScreen(),
+     //home: SearchScreen(),
     );
   }
 }

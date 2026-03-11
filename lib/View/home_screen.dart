@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:kidnet/Utils/images.dart';
+import 'package:kidnet/View/search_screen.dart';
 import 'package:kidnet/Widgets/my_widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -53,7 +55,10 @@ class HomeScreen extends StatelessWidget {
                                 size: 28,
                               ),
                               SizedBox(width: 20),
-                              Icon(Icons.search, color: Colors.white, size: 28),
+                              IconButton(onPressed: (){
+                                Get.to(SearchScreen());
+                              }, 
+                              icon: Icon(Icons.search,size: 28,color: Colors.white,))
                             ],
                           ),
                         ),

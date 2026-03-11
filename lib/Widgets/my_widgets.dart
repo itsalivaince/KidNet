@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:kidnet/Utils/images.dart';
+import 'package:kidnet/View/home_screen.dart';
 
 TextEditingController nameCtr = .new();
 TextEditingController passctr = .new();
+TextEditingController srchctr = .new();
 
 Widget Loginbar(
   String label,
@@ -17,7 +20,14 @@ Widget Loginbar(
     child: TextField(
       controller: controller,
       decoration: InputDecoration(
-        label: Text(label, style: TextStyle(color: Colors.white)),
+        hint: Padding(
+          padding: EdgeInsets.zero,
+          child: Text("", style: TextStyle(color: Colors.white)),
+        ),
+        label: Padding(
+          padding: EdgeInsets.zero,
+          child: Text(label, style: TextStyle(color: Colors.white)),
+        ),
         border: OutlineInputBorder(borderRadius: BorderRadius.horizontal()),
         filled: true,
         fillColor: Color,
@@ -38,8 +48,7 @@ Widget Loginbtn(
     decoration: BoxDecoration(color: color),
     child: TextButton(
       onPressed: () {
-        debugPrint(nameCtr.text);
-        debugPrint(passctr.text);
+       Get.to(HomeScreen());
       },
       child: Text(label, style: TextStyle(color: Colors.white)),
     ),
@@ -200,23 +209,41 @@ Widget Cmcard() {
     ],
   );
 }
-Widget Smcard(){
-  return
-  Container(
-  height: 180,
-  width: 126,
-  decoration: BoxDecoration( 
-    borderRadius: BorderRadius.circular(5),
-    image: DecorationImage(image: AssetImage(AppImages.image1),fit: BoxFit.cover)),
+
+Widget Smcard({double height = 180, double width = 126}) {
+  return Container(
+    height: height,
+    width: width,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(5),
+      image: DecorationImage(
+        image: AssetImage(AppImages.image1),
+        fit: BoxFit.cover,
+      ),
+    ),
   );
 }
-Widget Tmcard(){
-  return
- Container(
-  height: 370,
-  width: 185,
-  decoration: BoxDecoration( 
-    borderRadius: BorderRadius.circular(5),
-    image: DecorationImage(image: AssetImage(AppImages.image1),fit: BoxFit.cover)),
+
+Widget Tmcard() {
+  return Container(
+    height: 370,
+    width: 185,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(5),
+      image: DecorationImage(
+        image: AssetImage(AppImages.image1),
+        fit: BoxFit.cover,
+      ),
+    ),
+  );
+}
+
+Widget Smgridcard() {
+  return Container(
+  
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(5),
+      image: DecorationImage(image: AssetImage(AppImages.image1),fit: BoxFit.cover),
+    ),
   );
 }
