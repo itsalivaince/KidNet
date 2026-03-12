@@ -3,7 +3,7 @@ import 'package:get/route_manager.dart';
 import 'package:kidnet/View/second_page.dart';
 
 class FirstPage extends StatelessWidget {
-  FirstPage({super.key});
+ const FirstPage({super.key});
 
   @override
   Widget build(BuildContext context) {

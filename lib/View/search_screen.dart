@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:kidnet/Widgets/my_widgets.dart';
+import 'package:flutter/material.dart' ;
+import 'package:kidnet/Widgets/Text%20Bar/text_bar.dart';
+import 'package:kidnet/Widgets/Tiles/Movie_tile.dart';
+
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -8,9 +10,9 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(0, 0, 0, 1),
+        backgroundColor: Color(0xFF000000),
         body: Padding(
-          padding: EdgeInsets.only(left: 8, right: 8, top: 11),
+          padding: EdgeInsets.only(left: 8, right: 8, top: 12),
           child: ListView(
             children: [
               Row(
@@ -21,7 +23,7 @@ class SearchScreen extends StatelessWidget {
                     },
                     icon: Icon(Icons.search_sharp, size: 32),
                   ),
-                  Loginbar(
+                  Textbar(
                     "Search here",
                     Color.fromRGBO(41, 41, 41, 1),
                     srchctr,
@@ -30,7 +32,6 @@ class SearchScreen extends StatelessWidget {
                   ),
                 ],
               ),
-
               SizedBox(height: 7),
               Text(
                 "Movies & TV",
@@ -42,49 +43,19 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 7),
-              GridView.builder(
+              ListView.separated(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  childAspectRatio: 0.65,
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 4,
-                  mainAxisSpacing: 4,
-                ),
-                itemCount: 30,
+                itemCount: 20,
                 itemBuilder: (context, index) {
-                  return Smgridcard();
+                  return Smtile();
+                },
+                separatorBuilder: (context, index) {
+                  return SizedBox(height: 5);
                 },
               ),
             ],
           ),
-        ),
-
-         bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: Colors.black,
-          onTap: (value) {},
-          selectedItemColor: Color.fromRGBO(255, 255, 255, 1),
-          unselectedItemColor: Color.fromRGBO(255, 255, 255, 0.74),
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.new_releases_rounded),
-              label: "New & Hot",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.emoji_emotions_rounded),
-              label: "Fast laughs",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: "Search",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.downloading_sharp),
-              label: "Downloads",
-            ),
-          ],
         ),
       ),
     );

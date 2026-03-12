@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:kidnet/Utils/images.dart';
-import 'package:kidnet/Widgets/my_widgets.dart';
+import 'package:kidnet/Widgets/Buttons/buttons.dart';
+import 'package:kidnet/Widgets/Text%20Bar/text_bar.dart';
+
 
 class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+ const LoginPage({super.key});
 
   //TextEditingController nameCtr = TextEditingController();
   //TextEditingController passctr = TextEditingController();
@@ -24,13 +26,13 @@ class LoginPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
 
           children: [
-            Loginbar(
+            Textbar(
               "Email or Phone",
               Color.fromARGB(255, 81, 79, 79),
               nameCtr,
             ),
             SizedBox(height: 20),
-            Loginbar("Password", Color.fromARGB(255, 81, 79, 79), passctr),
+            Textbar("Password", Color.fromARGB(255, 81, 79, 79), passctr),
             SizedBox(height: 10),
 
             Loginbtn(Color.fromRGBO(229, 9, 20, 100), "Sign in"),

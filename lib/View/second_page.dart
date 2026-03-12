@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:kidnet/View/login_page.dart';
-import 'package:kidnet/View/search_screen.dart';
+
 
 class SecondPage extends StatelessWidget {
   const SecondPage({super.key});

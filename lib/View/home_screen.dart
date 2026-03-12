@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:kidnet/Utils/images.dart';
+
 import 'package:kidnet/View/search_screen.dart';
-import 'package:kidnet/Widgets/my_widgets.dart';
+import 'package:kidnet/Widgets/Boxes/home_boxes.dart';
+import 'package:kidnet/Widgets/Buttons/buttons.dart';
+import 'package:kidnet/Widgets/Movie%20Cards/Buttons_card.dart';
+import 'package:kidnet/Widgets/Movie%20Cards/Standard.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -46,8 +50,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 24),
-                        Container(
-                          child: Row(
+                      Row(
                             children: [
                               Icon(
                                 Icons.broadcast_on_home,
@@ -55,13 +58,19 @@ class HomeScreen extends StatelessWidget {
                                 size: 28,
                               ),
                               SizedBox(width: 20),
-                              IconButton(onPressed: (){
-                                Get.to(SearchScreen());
-                              }, 
-                              icon: Icon(Icons.search,size: 28,color: Colors.white,))
+                              IconButton(
+                                onPressed: () {
+                                  Get.to(SearchScreen());
+                                },
+                                icon: Icon(
+                                  Icons.search,
+                                  size: 28,
+                                  color: Colors.white,
+                                ),
+                              ),
                             ],
                           ),
-                        ),
+                        
                       ],
                     ),
                     Padding(
@@ -141,17 +150,17 @@ class HomeScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          Cmcard(),
+                          Bmcard(),
                           SizedBox(width: 2),
-                          Cmcard(),
+                          Bmcard(),
                           SizedBox(width: 2),
-                          Cmcard(),
+                          Bmcard(),
                           SizedBox(width: 2),
-                          Cmcard(),
+                          Bmcard(),
                           SizedBox(width: 2),
-                          Cmcard(),
+                          Bmcard(),
                           SizedBox(width: 2),
-                          Cmcard(),
+                          Bmcard(),
                         ],
                       ),
                     ),
@@ -222,17 +231,19 @@ class HomeScreen extends StatelessWidget {
                           scrollDirection: Axis.horizontal,
                           child: Row(
                             children: [
-                              Tmcard(),
+                              Smcard(height: 370, width: 185),
                               SizedBox(width: 2),
-                              Tmcard(),
+                              Smcard(height: 370, width: 185),
                               SizedBox(width: 2),
-                              Tmcard(),
+                              Smcard(height: 370, width: 185),
                               SizedBox(width: 2),
-                              Tmcard(),
+                              Smcard(height: 370, width: 185),
                               SizedBox(width: 2),
-                              Tmcard(),
+                              Smcard(height: 370, width: 185),
                               SizedBox(width: 2),
-                              Tmcard(),
+                              Smcard(height: 370, width: 185),
+                              SizedBox(width: 2),
+                              Smcard(height: 370, width: 185),
                             ],
                           ),
                         ),
