@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 TextEditingController nameCtr = .new();
 TextEditingController passctr = .new();
 TextEditingController srchctr = .new();
+TextEditingController frgtctr = .new();
 Widget Textbar(
   String label,
   Color Color,
@@ -31,3 +32,4 @@ Widget Textbar(
     ),
   );
 }
+

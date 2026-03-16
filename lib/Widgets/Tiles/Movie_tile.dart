@@ -1,52 +1,87 @@
-
 import 'package:flutter/material.dart';
+import 'package:kidnet/Models/Episodes.dart';
+
 import 'package:kidnet/Utils/images.dart';
 
-Widget Smtile() {
+
+Widget Smtile(
+  Episodes obj,
+  
+  {
+  double? lheight,
+  double? lradius,
+  double? lwidth,
+  
+  FontWeight? Tfweight,
+  double? Tfsize,
+  Color? Tfcolor,
+  
+  FontWeight? Sfweight,
+  double? Sfsize,
+  Color? Sfcolor,
+  double? Theight,
+  double? Twidth,
+  double? TBwidth,
+  double? TBradius,
+  Color? TBcolor,
+  VoidCallback? onPressed,
+  
+  Color? TIcolor,
+  VoidCallback? onTap,
+}) {
   return Padding(
     padding: EdgeInsets.zero,
     child: ListTile(
       leading: Container(
-        height: 54,
-        width: 96,
-        decoration: BoxDecoration(
+        height: lheight ?? 54,
+        width: lwidth ?? 96,
+        decoration: BoxDecoration( borderRadius: BorderRadius.circular(lradius??0),
           image: DecorationImage(
-            image: AssetImage(AppImages.image1),
+            image: AssetImage(obj.Image),
             fit: BoxFit.cover,
           ),
         ),
       ),
       title: Text(
-        "The Sea Beast Tile",
+        obj.title,
         style: TextStyle(
-          fontWeight: FontWeight.w400,
-          fontSize: 12,
-          color: Color(0xFF8C8C8C),
+          fontWeight: Tfweight ?? .w400,
+          fontSize: Tfsize ?? 12,
+          color: Tfcolor ?? Color(0xFF8C8C8C),
         ),
       ),
       subtitle: Text(
-        "The Sea Beast Description,The Sea Beast Description,The Sea Beast Description,",
+        obj.subtite ,
+            
         style: TextStyle(
-          fontWeight: FontWeight.w400,
-          fontSize: 10,
-          color: Color(0xFF8C8C8C),
+          fontWeight: Sfweight ?? .w400,
+          fontSize: Sfsize ?? 10,
+          color: Sfcolor ?? Color(0xFF8C8C8C),
         ),
       ),
 
       trailing: Container(
         padding: EdgeInsets.zero,
-        height: 32,
-        width: 32,
+        height: Theight ?? 32,
+        width: Twidth ?? 32,
         decoration: BoxDecoration(
-          border: Border.all(width: 3, color: Color.fromRGBO(255, 255, 255, 1)),
-          borderRadius: BorderRadius.circular(25),
+          border: Border.all(
+            width: TBwidth ?? 3,
+            color: TBcolor ?? Color.fromRGBO(255, 255, 255, 1),
+          ),
+          borderRadius: BorderRadius.circular(TBradius ?? 25),
         ),
         child: IconButton(
           padding: EdgeInsets.zero,
-          onPressed: () {},
-          icon: Icon(Icons.play_arrow, color: Color.fromRGBO(255, 255, 255, 1)),
+          onPressed: onPressed,
+          icon: Icon(
+            obj.icon,
+            color: TIcolor ?? Color.fromRGBO(255, 255, 255, 1),
+          ),
         ),
+
       ),
+      onTap:onTap ,
     ),
   );
 }

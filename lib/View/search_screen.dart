@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart' ;
+import 'package:get/route_manager.dart';
+import 'package:kidnet/Models/Episodes.dart';
+import 'package:kidnet/View/series_page.dart';
 import 'package:kidnet/Widgets/Text%20Bar/text_bar.dart';
 import 'package:kidnet/Widgets/Tiles/Movie_tile.dart';
 
@@ -48,7 +51,7 @@ class SearchScreen extends StatelessWidget {
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: 20,
                 itemBuilder: (context, index) {
-                  return Smtile();
+                  return Smtile(Smovies[index],onPressed: (){Get.to(SeriesPage());});
                 },
                 separatorBuilder: (context, index) {
                   return SizedBox(height: 5);

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:kidnet/View/series_page.dart';
 import 'package:kidnet/Widgets/Movie%20Cards/Standard.dart';
 
 
@@ -36,7 +38,7 @@ class NewHot extends StatelessWidget {
                 ),
                 itemCount: 30,
                 itemBuilder: (context, index) {
-                  return Smcard(height: 0,width: 0);
+                  return Smcard(height: 0,width: 0,);
                 },
               ),
             ],

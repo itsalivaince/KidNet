@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:kidnet/Utils/images.dart';
+import 'package:kidnet/View/series_page.dart';
 
 Widget Bmcard() {
   return Column(
@@ -84,7 +86,9 @@ Widget Bmcard() {
                 ),
                 child: IconButton(
                   padding: EdgeInsets.zero,
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(SeriesPage());
+                  },
                   icon: Icon(Icons.play_arrow, color: Colors.white, size: 10),
                 ),
               ),

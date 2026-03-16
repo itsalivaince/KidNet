@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kidnet/View/Forgot_page.dart';
+import 'package:kidnet/View/first_page.dart';
 import 'package:kidnet/View/home_screen.dart';
+import 'package:kidnet/View/login_page.dart';
 
 import 'package:kidnet/View/new_hot.dart';
+import 'package:kidnet/View/search_screen.dart';
+import 'package:kidnet/View/series_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,6 +47,8 @@ class MyApp extends StatelessWidget {
       home: HomeScreen(),
       //home: SearchScreen(),
       //home: NewHot(),
+      //home: SeriesPage(),
+      //home: ForgotPage(),
     );
   }
 }
