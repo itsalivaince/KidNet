@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:go_router/go_router.dart';
 import 'package:kidnet/View/login_page.dart';
+import 'package:kidnet/config/routes/rote_path.dart';
 
 
 class SecondPage extends StatelessWidget {
@@ -39,7 +41,8 @@ class SecondPage extends StatelessWidget {
                color:Color.fromRGBO(210, 47, 38, 1) 
                ),
                  child: TextButton(onPressed: (){
-                  Get.to(LoginPage());
+                  // Get.offAll(LoginPage());
+                  context.go(RoutePath.loginPage);
                  }, 
                  child: Text("Get Started", 
                  style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,color: Colors.white ),)),

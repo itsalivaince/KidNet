@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
-import 'package:kidnet/View/series_page.dart';
 import 'package:kidnet/Widgets/Movie%20Cards/Standard.dart';
 
 

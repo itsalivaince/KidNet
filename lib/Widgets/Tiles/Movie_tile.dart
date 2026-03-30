@@ -1,7 +1,9 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:kidnet/Models/Episodes.dart';
 
-import 'package:kidnet/Utils/images.dart';
+
 
 
 Widget Smtile(
