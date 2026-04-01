@@ -8,8 +8,8 @@ import 'package:kidnet/config/routes/rout_name.dart';
 import 'package:kidnet/p2/z_main_page.dart';
 
 final GoRouter appRouter = GoRouter(
-  // initialLocation: RoutePath.firstPage,
-  initialLocation: RoutePath.mainpage,
+   initialLocation: RoutePath.firstPage,
+  //initialLocation: RoutePath.mainpage,
 
   routes: [
     /// FirstPage
